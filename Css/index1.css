@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-color: rgb(245, 67, 67);
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(17, 17, 17);
+  padding: 20px;
+  height: 200px;
+}
+
+.navbar {
+  grid-area: navbar;
+  
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  
+}
+
+.main {
+  grid-area: main;
+ 
+}
+
+.footer {
+  grid-area: footer;
+  
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  170px
+    /* "navbar"  50px */
+    "main"    auto
+    "sidebar" auto /* ACA CAMBIO EL LARGO DE SIDEBARD */
+    "footer"  100px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    /* grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: 
+    "header  header"
+    "navbar  navbar"
+    "sidebar main"
+    "footer  footer"; */
+
+    
+
+    grid-template:
+      "header  header" 180px
+     /*  "navbar  navbar" 50px */
+      "sidebar main"   auto 
+      "footer  footer" 100px /
+      400px    auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  auto
+      " main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+
+/* HEADER */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 17, 17);
+    
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    color: white;
+    width: max-content;
+    text-transform: uppercase;
+    
+    
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+     text-transform: uppercase;
+     width: max-content;
+
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+
+}
+
+.nav-menu-link:hover {
+    background-color: #034574;
+    transition: 0.5s;
+    
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+  .logo {
+    font-size: 20px;
+    ;
+    
+    
+}
+
+.nav-menu-item {
+  font-size: 15px;
+  
+
+}
+
+}
+
+/* MAIN HOME */
+
+.main_home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height:80vh;
+  background-image:url(../Img/Morasprincipal.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: auto;
+ 
+  }
+
+  .main_title {
+    display: inline;
+    color: rgb(119, 11, 11);
+    text-shadow: 1.5px 1.5px 2px black;
+}
+
+/* ACERCA */
+
+.info {
+  padding: 35px;
+  color: white;  
+  background: rgb(30, 30, 30);
+  text-align: center;
+  width: auto;
+  }
+
+
+
+
+/* MAIN EVENTOS*/
+
+.main {
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+}
+
+.comida_img {
+  background-image: url(../Img/comida_img.jpg);
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.comida_img:hover {
+  transform: scale(1.01,1.01) ;
+  transition: all 0.3s linear;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+  cursor: pointer;
+}
+
+.comida_text {
+  color: white;
+  margin: 20px;
+}
+
+.btn_eventos { 
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: white;
+  /* background: rgb(245, 67, 67) ; */
+  border-radius: 6px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, rgb(245, 67, 67) 50%,rgb(17, 17, 17) 50%);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-position .3s ease;
+} 
+.btn_eventos:hover { 
+  
+  background-position: right;
+  transform: scale(1.1,1.1);
+ 
+} 
+
+/* SIDEBAR */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+
+.sidebar_text {
+  color: white;
+  margin: 20px;
+}
+
+.sidebar_img1 {
+  background-image: url(../Img/recreativ_img1.jpg);
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+  
+}
+
+.sidebar_img1:hover {
+  transform: scale(1.2,1.2) ;
+  transition: all 0.3s linear;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+  cursor: pointer;
+}
+
+.sidebar_img2 {
+  background-image: url(../Img/recreativ_img2.jpg);
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+
+.sidebar_img2:hover {
+  transform: scale(1.2,1.2) ;
+  transition: all 0.3s linear;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(236, 56, 56);
+  padding: 10px;
+  align-items: center;
+  
+}
+
+/* Contacto */
+
+.titulo_contacto {
+  text-align: center;
+  background-color: rgb(30, 30,30);
+  color: whitesmoke;
+  border: 1px;
+  padding: 50px;
+}
+
+.contacto_cont {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 56,56);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contacto_cont div{
+  background-color: rgb(184, 36, 36);
+  width: 400px;
+  height: 100px;
+  margin: 100px;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+}
+
+/* Formulario */
+.form_final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+@media(max-width: 900px) {
+  .contacto_cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(17, 17, 17);
+    height: auto;
+    
+}
+
+.header {
+  height: 170px;
+  padding: 20px;
+}
+
+
+}
+
+

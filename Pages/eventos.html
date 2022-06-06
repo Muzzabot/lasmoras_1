@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="../Css/index1.css">
+  <script  src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="grid-container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header_cont">
+        <nav class="navbar">
+          <div class="animate__animated animate__backInLeft"><a href="#" class="logo">Las Moras</a></div>
+            
+           
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="animate__animated animate__backInRight">
+                <ul class="nav-menu">
+                  <li class="nav-menu-item"><a href="../index.html" class="nav-menu-link">Home</a></li>
+                  <li class="nav-menu-item"><a href="../Pages/eventos.html" class="nav-menu-link">Eventos</a></li>
+                  <li class="nav-menu-item"><a href="./acerca.html" class="nav-menu-link">Acerca</a></li>
+                  <li class="nav-menu-item"><a href="./contacto.html" class="nav-menu-link">Contacto</a></li>
+                
+                  
+  
+              </ul>
+              </div>
+            
+        </nav>
+    </div>
+
+
+  </header>
+
+ <!-- ASIDE -->
+  <aside class="sidebar"> <button class="btn_eventos"><h3>Eventos destacados</h3></button> 
+    <div class="sidebar_text"><p>Aquí podras disfrutar de las siguientes actividades</p></div>
+    <div class="sidebar_img1"></div>
+    <div class="sidebar_img2"></div>
+  </aside>
+
+  <!-- MAIN -->
+   <div class="main">
+     <div class="comida_img"></div>
+     <div class="comida_text"> <h3>Nuestra cocina</h3>
+      <p>Al momento de apreciar un rico <br> corte de carne lo ideal <br> es comerlo jugoso y para eso <br>debe respetarse una regla de oro: <br> Los comensales deben esperar a la carne y no al reves </p>
+     </div>     
+   </div>
+    
+   <!-- Footer de la pagina -->
+
+  <footer class="footer">
+    <section class="titulo_eventos">
+      <h2>COMUNICATE CON NOSOTROS</h2>
+      <p>Envianos tus dudas mediante el siguiente formulario</p>
+
+      <form action="./formulario.html" method="post">
+         
+          <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+
+         
+          <input type="email" name="email" placeholder="Email" required >
+          
+         <!--  <textarea name="" id="" cols="30" rows="10"></textarea> -->
+          <input type="reset" value="Limpiar formulario">
+          <input type="submit" value="Enviar formulario">
+
+
+      </form>
+  </section>
+  </footer>
+
+  
+   
+
+</body>
+</html>
